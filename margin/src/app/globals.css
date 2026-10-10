@@ -132,10 +132,14 @@
 .dark {
   --background: oklch(0 0 0);
   --star: oklch(0.8 0.17 75);
+  --charcoal: #1f1f22;
+  --charcoal-hover: #2a2a2e;
 }
 @theme inline {
   --font-display: var(--font-archivo);
   --color-star: var(--star);
+  --color-charcoal: var(--charcoal);
+  --color-charcoal-hover: var(--charcoal-hover);
 }
 .font-display { font-stretch: 112%; }
 @utility label {

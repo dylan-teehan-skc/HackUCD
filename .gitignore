@@ -1,2 +1,6 @@
 Teaching_Structure/
 .DS_Store
+# build outputs and submission bundle
+margin.zip
+submission/
+.DS_Store

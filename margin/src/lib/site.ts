@@ -4,8 +4,11 @@ export const routes = {
   login: "/login",
   library: "/modules",
   module: (code: string) => `/m/${code}`,
+  topic: (code: string, slug: string) => `/m/${code}/${slug}`,
   note: (id: string) => `/n/${id}`,
   condense: "/condense",
+  favourites: "/favourites",
+  me: "/me",
 } as const
 
 // ponytail: demo numbers, replace with a count query on notes/modules/stars once Supabase is wired.

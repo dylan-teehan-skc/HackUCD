@@ -1,6 +1,6 @@
 # Agents
-Read `docs/DECISIONS.md` before changing anything, and append a dated entry for any new decision.
-Keep it minimal (ponytail): reuse shadcn components, no new deps without a reason, all links via `routes` in `src/lib/site.ts`.
+Read `docs/HOW_IT_WORKS.md` (how everything works), `docs/PROJECT_CONTEXT.md` (full context) then `docs/DECISIONS.md` before changing anything, and append a dated entry for any new decision.
+Keep it minimal (ponytail): reuse shadcn components, no new deps without a reason, all links via `routes` in `src/lib/site.ts`. Never print or commit `.env.local`.
 
 <!-- BEGIN:nextjs-agent-rules -->
 

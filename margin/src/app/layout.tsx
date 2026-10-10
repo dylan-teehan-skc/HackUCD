@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { Archivo, Geist, Geist_Mono } from "next/font/google"
 import "./globals.css"
+import { Nav } from "@/components/layout/nav"
 
 const sans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] })
 const mono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] })
@@ -14,7 +15,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`dark ${sans.variable} ${mono.variable} ${display.variable} antialiased`}>
-      <body className="min-h-svh">{children}</body>
+      <body className="min-h-svh">
+        <Nav />
+        {children}
+      </body>
     </html>
   )
 }

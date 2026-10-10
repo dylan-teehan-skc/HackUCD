@@ -31,8 +31,9 @@ FREE_CONDENSES=2
 
 ## Database (Postgres)
 ```sql
-profiles        (id uuid pk = auth.users.id, email, display_name, is_reviewer bool default false, condenses_used int default 0, is_pro bool default false, stripe_customer_id text)
-modules         (id, code text unique, name, school)
+profiles        (id uuid pk = auth.users.id, email, display_name, is_reviewer bool default false, condenses_used int default 0, is_pro bool default false, stripe_customer_id text, college_id references colleges)
+colleges        (id text pk, name)                                -- UCD's 6 colleges
+modules         (id, code text unique, name, school, college_id references colleges)
 enrollments     (user_id, module_id, pk(user_id, module_id))
 topics          (id, module_id, title, parent_id null)          -- parent_id null = topic, set = subsection
 notes           (id, topic_id, author_id, title, kind text check (kind in ('pdf','markdown','condensed')),
